@@ -23,8 +23,8 @@ function playPause() {
 function skipBackward() {
   const video = getYouTubeVideo();
   if (video) {
-    video.currentTime = Math.max(video.currentTime - 10, 0);
-    console.log('后退10秒, 当前时间:', video.currentTime);
+    video.currentTime = Math.max(video.currentTime - 5, 0);
+    console.log('后退5秒, 当前时间:', video.currentTime);
   }
 }
 
