@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube 全局播放控制",
+  "version": "1.0",
+  "description": "使用快捷键全局控制YouTube视频播放/暂停、前进和后退",
+  
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  
+  "commands": {
+    "play-pause": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Space"
+      },
+      "description": "播放/暂停YouTube视频"
+    },
+    "forward": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Right"
+      },
+      "description": "快进10秒"
+    },
+    "backward": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Left"
+      },
+      "description": "后退10秒"
+    }
+  }
+}
