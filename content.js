@@ -20,19 +20,27 @@ function playPause() {
   }
 }
 
-function skipForward() {
-  const video = getYouTubeVideo();
-  if (video) {
-    video.currentTime = Math.min(video.currentTime + 10, video.duration);
-    console.log('快进10秒, 当前时间:', video.currentTime);
-  }
-}
-
 function skipBackward() {
   const video = getYouTubeVideo();
   if (video) {
     video.currentTime = Math.max(video.currentTime - 10, 0);
     console.log('后退10秒, 当前时间:', video.currentTime);
+  }
+}
+
+function volumeUp() {
+  const video = getYouTubeVideo();
+  if (video) {
+    video.volume = Math.min(video.volume + 0.1, 1);
+    console.log('音量升高, 当前音量:', video.volume);
+  }
+}
+
+function volumeDown() {
+  const video = getYouTubeVideo();
+  if (video) {
+    video.volume = Math.max(video.volume - 0.1, 0);
+    console.log('音量降低, 当前音量:', video.volume);
   }
 }
 
@@ -43,11 +51,14 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     case 'play-pause':
       playPause();
       break;
-    case 'forward':
-      skipForward();
-      break;
     case 'backward':
       skipBackward();
+      break;
+    case 'volume-up':
+      volumeUp();
+      break;
+    case 'volume-down':
+      volumeDown();
       break;
     default:
       console.log('未知命令:', message.action);
