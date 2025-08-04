@@ -24,25 +24,25 @@
   "commands": {
     "play-pause": {
       "suggested_key": {
-        "default": "Ctrl+Shift+Right"
+        "default": "Ctrl+Right"
       },
       "description": "播放/暂停YouTube视频"
     },
     "backward": {
       "suggested_key": {
-        "default": "Ctrl+Shift+Left"
+        "default": "Ctrl+Left"
       },
       "description": "后退10秒"
     },
     "volume-up": {
       "suggested_key": {
-        "default": "Ctrl+Shift+Up"
+        "default": "Ctrl+Up"
       },
       "description": "升高音量"
     },
     "volume-down": {
       "suggested_key": {
-        "default": "Ctrl+Shift+Down"
+        "default": "Ctrl+Down"
       },
       "description": "降低音量"
     }
