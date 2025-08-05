@@ -30,7 +30,7 @@
     },
     "backward": {
       "suggested_key": {
-        "default": "Ctrl+Left"
+        "default": "Ctrl+Down"
       },
       "description": "后退10秒"
     }
