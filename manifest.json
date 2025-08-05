@@ -24,7 +24,7 @@
   "commands": {
     "play-pause": {
       "suggested_key": {
-        "default": "Ctrl+Right"
+        "default": "Ctrl+Up"
       },
       "description": "播放/暂停YouTube视频"
     },
@@ -33,18 +33,18 @@
         "default": "Ctrl+Left"
       },
       "description": "后退10秒"
-    },
-    "volume-up": {
-      "suggested_key": {
-        "default": "Ctrl+Up"
-      },
-      "description": "升高音量"
-    },
-    "volume-down": {
-      "suggested_key": {
-        "default": "Ctrl+Down"
-      },
-      "description": "降低音量"
     }
+    // "volume-up": {
+    //   "suggested_key": {
+    //     "default": "Ctrl+Up"
+    //   },
+    //   "description": "升高音量"
+    // },
+    // "volume-down": {
+    //   "suggested_key": {
+    //     "default": "Ctrl+Down"
+    //   },
+    //   "description": "降低音量"
+    // }
   }
 }
